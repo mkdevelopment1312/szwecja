@@ -1,0 +1,141 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 155 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 30% 15%;
+
+    --primary: 155 70% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 155 15% 96%;
+    --secondary-foreground: 155 70% 25%;
+
+    --muted: 155 15% 96%;
+    --muted-foreground: 155 20% 40%;
+
+    --accent: 155 20% 92%;
+    --accent-foreground: 155 70% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 20% 90%;
+    --input: 155 20% 90%;
+    --ring: 155 70% 25%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 155 50% 3%;
+    --foreground: 0 0% 95%;
+
+    --card: 155 45% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 155 45% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 155 60% 45%;
+    --primary-foreground: 155 50% 5%;
+
+    --secondary: 155 25% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 155 25% 12%;
+    --muted-foreground: 155 15% 65%;
+
+    --accent: 155 25% 12%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 25% 12%;
+    --input: 155 25% 12%;
+    --ring: 155 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, 
+    #064e3b 0%, 
+    #047857 25%, 
+    #059669 50%, 
+    #10b981 75%, 
+    #34d399 100%);
+}
+
+.hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(6, 78, 59, 0.95) 0%, 
+    rgba(4, 120, 87, 0.9) 50%, 
+    rgba(16, 185, 129, 0.85) 100%);
+}
+
+.construction-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 40px -10px rgba(6, 78, 59, 0.2);
+}
+
+.service-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px -10px rgba(6, 78, 59, 0.25);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #059669, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
